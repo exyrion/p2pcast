@@ -1,0 +1,22 @@
+<div>
+  <h1>Live Channels</h1>
+    <% if (channels.length > 0) { %>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td><Strong>Channel Name</Strong></td>
+          <td><Strong>Owner</Strong></td>
+        </tr>
+      </thead>
+      <tr>
+        <% _.each(channels, function (channel) { %>
+        <% if (!channel.owner) return true; %>
+        <td><a href="/c/<%= channel.id %>-<%= channel.name %>"><%= channel.name %></a></td>
+        <td><%= channel.owner.name %></td>
+      </tr>
+      <% }) %>
+    </table>
+    <% } else { %>
+    <h2><small>No Channels Available</small></h2>
+    <% } %>
+</div>

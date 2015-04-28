@@ -1,0 +1,43 @@
+/* Styles for homepage */
+
+/*body #home_background {
+	background: url('/images/background/concert-audience.jpg') no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+}*/
+
+.channel-previews li {
+	/*display: block;*/
+	background-color: black;
+/*	width: 100px;
+	height: 100px;*/
+}
+
+.row.wide-gutter [class*='col-']:not(:first-child):not(:last-child){
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#stream {
+	/*background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(0, 0, 0, 0.75));*/
+	margin-top: 110px;
+	background: rgba(240,240,240,0.8);
+}
+
+#browse_all {
+	/*background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.85));*/
+	background: rgba(240,240,240,0.8);
+}
+
+div .centered {
+	text-align: center;
+}
+
+div .jumbotron {
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+	height: 100%;
+}

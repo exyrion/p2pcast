@@ -1,0 +1,41 @@
+<!-- Modal for Register -->
+<div class="modal fade small" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" align="center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Register</h4>
+      </div>
+      <div class="modal-body">
+        <div class="login-form">
+          <form role="form" action="/user/create" method="post">
+
+
+            <div class="form-group">
+              <input type="text" class="form-control login-field" value="" placeholder="Name" name="name" id="newName" required>
+              <label class="login-field-icon fui-user" for="name"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control login-field" value="" placeholder="Email" name="email" id="newEmail" required>
+              <label class="login-field-icon fui-user" for="email"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control login-field" value="" placeholder="Password" name="password" id="newPassword" required>
+              <label class="login-field-icon fui-lock" for="password"></label>
+            </div>
+
+
+            <!-- Alert message if something went wrong with registration -->
+            <div class="alert alert-danger hidden">
+                  <p id="flashRegister"><small><%= req.flash('registerMsg') %></small></p>
+            </div>
+
+            <input class="btn btn-primary btn-lg btn-block" value="Sign Up" id="signup" type="submit" />
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

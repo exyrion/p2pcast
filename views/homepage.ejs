@@ -1,0 +1,41 @@
+ <style>
+  body {
+    background: url('/images/background/crowd.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+</style>
+<div class="jumbotron centered" id="stream">
+
+  <h3>Stream your live content!</h3>
+  <p class="lead">Share your lectures, concert, games with as many as you'd like!</p>
+
+  <% if ( !_.isUndefined(req.session.user) ) { %>
+  <button id ="openBroadcastModal" class="btn btn-info btn-embossed btn-lg ">Broadcast Now!</button>
+  <% } else { %>
+  <button id="goToLogin" class="btn btn-info btn-embossed btn-lg" style="horizontal-align: middle;">Broadcast Now!</button>
+  <% } %>
+
+  <h3>Browse all live channels!</h3>
+  <p class="lead">Check out lectures, concerts, games with many other people! <br>You don't even need to register!</p>
+  <span><form class="form-inline" role="form"><a class="btn btn-inverse btn-embossed btn-lg mrs" style="background-color: #98df;" href="/channel">See More!</a></form></span>
+
+  <!-- Channel preview panes -->
+    <!--
+      <div class="row wide-gutter">
+      <div class="col-md-12">
+        <ol class="list-inline channel-previews">
+          <li class="col-md-2">...</li>
+          <li class="col-md-2">...</li>
+          <li class="col-md-2">...</li>
+        </ol>
+      </div>
+    </div>
+  -->
+
+  <!-- render partial for broadcast modal -->
+  <%- partial('partials/broadcast.ejs') %>
+
+</div>

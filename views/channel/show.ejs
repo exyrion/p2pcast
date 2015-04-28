@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-push-2">
+    <h3>
+      <span id="liveness-indicator" class="label palette-asbestos">&hellip;</span>
+      <!--
+      <button class="btn" type="button">
+        <span id="liveness-indicator"></span>
+        <span id="peerId" class="badge"></span>
+      </button>
+      -->
+      </small><%= (channel.name || "Not Found") %>
+      <% if (!_.isUndefined(channel) && !_.isUndefined(req.session.user) && channel.owner.id === req.session.user.id) { %>
+        <a href="#" id="modifyChannel" data-channel-id="<%= channel.id %>" data-channel-name="<%= channel.name %>" data-channel-description="<%= channel.description %>"><span class="fui-new"></span></a>
+      <% } %>
+    </h3>
+    <% if ( !_.isUndefined(channel) && channel.id) { %>
+      <span id="currentChannelId" style="display:none;"><%= channel.id %></span>
+    <% } %>
+
+    <!-- Determine whether user on the watch page is a a broadcaster.
+         Broadcasters will have option to click on video container & given option to start video
+    -->
+    <% if (!_.isUndefined(channel) && !_.isUndefined(req.session.user) && channel.owner.id === req.session.user.id) { %>
+      <div id="localVideoContainer">
+        <div class="container-fluid">
+          <button disabled type="button" class="btn btn-lg btn-embossed btn-danger" id="addVideo">
+            <span class="fui-video"></span> Start Video</button>
+        </div>
+    <% } else { %>
+      <div id="localVideoContainer">
+    <% } %>
+      <video id="localVideo" width="640" height="360" controls hd="1" autoplay autohide="2"></video>
+    </div>
+    <div class="clearfix visible-sm"></div>
+    <div class="row h6">
+      <div class="col-sm-5">
+        <!--<span title="Unique hits"><span class="fui-eye"></span> <strong id="viewers">42</strong></span>-->
+        <span title="Number of viewers"><span class="fui-user"></span> <strong id="peers">0</strong></span>
+        <small style="color:#7F8C8D" title="Peer ID">Peer ID <span id="peerId">?</span></small>
+      </div>
+    </div>
+    <div class="clearfix visible-sm"></div>
+    <% if (!_.isUndefined(channel) && _.isString(channel.description) && channel.description.length > 0) { %>
+    <div class="row">
+      <div class="col-sm-8">
+        <h6>Description</h6>
+        <p><%= channel.description %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<%- partial('../partials/channel_modify.ejs') %>

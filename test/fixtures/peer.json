@@ -1,0 +1,58 @@
+[
+  {
+    "socketID": "dummy1",
+    "channel": 1,
+    "broadcaster": true,
+    "parent": 1,
+    "children": [1, 2, 3, 4, 7, 8]
+  },
+  {
+    "socketID": "dummy2",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 2,
+    "children": [5]
+  },
+  {
+    "socketID": "dummy3",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 3,
+    "children": [6]
+  },
+  {
+    "socketID": "dummy4",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 4,
+    "children": []
+  },
+  {
+    "socketID": "dummy5",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 5,
+    "children": []
+  },
+  {
+    "socketID": "dummy6",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 6,
+    "children": []
+  },
+  {
+    "socketID": "dummy7",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 7,
+    "children": []
+  },
+  {
+    "socketID": "dummy8",
+    "channel": 1,
+    "broadcaster": false,
+    "parent": 8,
+    "children": []
+  }
+]

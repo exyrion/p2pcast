@@ -1,0 +1,42 @@
+[
+  {
+    "initiator": 1,
+    "receiver": 1,
+    "state": "established"
+  },
+  {
+    "initiator": 2,
+    "receiver": 1,
+    "state": "established"
+  },
+  {
+    "initiator": 3,
+    "receiver": 1,
+    "state": "established"
+  },
+  {
+    "initiator": 4,
+    "receiver": 1,
+    "state": "connecting"
+  },
+  {
+    "initiator": 5,
+    "receiver": 2,
+    "state": "connecting"
+  },
+  {
+    "initiator": 6,
+    "receiver": 3,
+    "state": "init_established"
+  },
+  {
+    "initiator": 7,
+    "receiver": 1,
+    "state": "established"
+  },
+  {
+    "initiator": 8,
+    "receiver": 1,
+    "state": "recv_established"
+  }
+]

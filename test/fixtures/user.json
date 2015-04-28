@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Bob",
+    "email": "bob@aol.com",
+    "password": "whatistheinternet"
+  },
+  {
+    "name": "Dr Awesome",
+    "email": "professor@ucsb.edu",
+    "password": "capstone"
+  }
+]
